@@ -19,31 +19,31 @@ Practicas de Programacion para Microcontroladores PIC16F.
   <p align="center">
   <img src="/images/ap1base.png"></img>
 </p>
-El cricuito que destella un led con tarea concurrente utilizando un temporizador, este codigo representa el programa base para los siguientes ejemplos.
+El programa destella los leds conectados el PIC con frecuencia y ciclo de trabajo diferente, se hace uso del temporizador TMR0 para realizar las tareas de forma concurrente sin bloquear le ejecucion del programa principal. EL modulo TMR0 esta configurado para temporizar intervales de 1ms.
 
 ### - P02 - Control de Trafico Vehicular [APTRAFFIC]
 <p align="center">
   <img src="/images/ap2traffic.png"></img>
 </p>
-Este circuito muestra como implementar un contrlador de trafico para dos fases, el cual incluye una entrada de mantenimiento. Los tiempos son programables
+El programa muestra como implementar un contrlador de trafico para dos fases, utilizando como base de tiempo el temporizador TMR0. Ademas se cuenta con una entrada de alerta SW1 que en caso de fall obliga al controlador a ingreear al modo de mantenimiento en el cual las luces amarillas destellaran. 
 
 ### - P03 - Monitor de Datos Serial ADC  [APMONITOR]
 <p align="center">
   <img src="/images/ap3monitor.png"></img>
 </p>
-Circuito que hace lectura de dos canales analogicos y uno digital del joystick, y cuyos valores se transmiten a un ordenador a travez del puerto serial.
+Este programa realiza la lectura de los canales analogicos AN0 y AN1, y asi mismo lee el estado del pulsador SW1 de manera concurrente, ademas se enviara por el puerto serial UART la magnitud de las conversiones y el estado del pulsador, en la practica se utilizara un joystick de doble eje y una interfaz graficas para visualizar la informaicon. 
 
 ### - P04 - Controlador para Servomotor  [APSERVO]
 <p align="center">
   <img src="/images/ap4servo.png"></img>
 </p>
-Este circuito permite el control de un servomotor para la apertura de barra utilizando un detector de objetos por ultrasonido
+El programa permite controladr la posicion de un servomotor del tipo SG90, el control se lleva a cabo en porcentaje 0 al 100% del movimiento, Ademas se efectuara la lectura de un sensor de distancia por ultrasonido para detectar la presencia de un objeto y desplazar una barra utilizando el sermovotor. 
 
 ### - P05 - Control de Acceso Autorizado [APKEYPAS]
 <p align="center">
   <img src="/images/ap5keypas.png"></img>
 </p>
-Circuito para el control de acceso autorizado, utilizando un teclado para ingresar la clave y un display que muestra el estado.
+Programa basico que muestra como utilizar un telcado matricial para ingresar datos y una pantalla del tipo LCD, el proceso permite ingresar de manera controlada una clave de acceso de cuatro digitos para luego validar el dato y mostrar si la clave fue aceptada o rechazada.
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
