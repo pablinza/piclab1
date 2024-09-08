@@ -1,0 +1,145 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"10 /opt/microchip/xc8/v2.50/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.50/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"16 /home/pablo/MPLABXProjects/elt346/p1apbase.X/main.c
+[v _isr isr `II(v  1 e 1 0 ]
+"25
+[v _main main `(v  1 e 1 0 ]
+"38
+[v _setupMCU setupMCU `(v  1 e 1 0 ]
+"59
+[v _taskLED1 taskLED1 `(v  1 e 1 0 ]
+"69
+[v _taskLED2 taskLED2 `(v  1 e 1 0 ]
+"59 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+[s S129 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"369
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES138  1 e 1 @8 ]
+[s S150 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+]
+"427
+[u S155 . 1 `S150 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES155  1 e 1 @9 ]
+[s S22 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"482
+[s S31 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
+[s S163 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1366
+[s S170 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S174 . 1 `S163 1 . 1 0 `S170 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES174  1 e 1 @129 ]
+[s S95 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1619
+[u S104 . 1 `S95 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES104  1 e 1 @136 ]
+[s S116 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+`uc 1 TRISE3 1 0 :1:3 
+]
+"1677
+[u S121 . 1 `S116 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES121  1 e 1 @137 ]
+[s S67 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1882
+[s S73 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S78 . 1 `S67 1 . 1 0 `S73 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES78  1 e 1 @143 ]
+"3387
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3449
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"12 /home/pablo/MPLABXProjects/elt346/p1apbase.X/main.c
+[v _tickms tickms `VEb  1 e 0 0 ]
+"25
+[v _main main `(v  1 e 1 0 ]
+{
+"37
+} 0
+"69
+[v _taskLED2 taskLED2 `(v  1 e 1 0 ]
+{
+"71
+[v taskLED2@cnt cnt `us  1 s 2 cnt ]
+"78
+} 0
+"59
+[v _taskLED1 taskLED1 `(v  1 e 1 0 ]
+{
+"61
+[v taskLED1@cnt cnt `us  1 s 2 cnt ]
+"68
+} 0
+"38
+[v _setupMCU setupMCU `(v  1 e 1 0 ]
+{
+"58
+} 0
+"16
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"24
+} 0
