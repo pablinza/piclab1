@@ -50,7 +50,7 @@ Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 
 
 
-<img src="/images/pic2.png" align="left" width="200px"/>
+<img src="/images/pablo_ueb.png" align="left" width="200px"/>
 Autor: Pablo Zarate, puedes contactarme a pablinza@me.com / pablinzte@gmail.com.  <br />
 Visita mi Blog  [Blog de Contenidos](https://pablinza.blogspot.com/). <br />
 Visita mi Canal [Blog de Contenidos](http://www.youtube.com/@pablozarate7524)). <br />
