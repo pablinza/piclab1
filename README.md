@@ -15,7 +15,7 @@ Los proyectos se crearon con la version MPLABX 6.25 y el compilador XC8 2.50 ver
 Practicas de Programacion para Microcontroladores PIC16F.
 
 ## Lista de practicas desarrolladas en la Materia
-### - P01 - Destello de Luz Seciencial   [APPBASE]
+### - P01 - Destello de Luz Secuencial   [APPBASE]
   <p align="center">
   <img src="/images/ap1base.png"></img>
 </p>
