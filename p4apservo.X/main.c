@@ -109,7 +109,7 @@ void taskSR04(void) //Lectura de sensor pasos en ms
     {
         case 0: //Disparo TRIG 10us
             TRIGpin = 1;
-            _delay(50); //0.5u x 20 = 10u
+            _delay(20); //0.5u x 20 = 10u
             TRIGpin = 0;
             state++;
             break;
