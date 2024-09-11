@@ -29,17 +29,15 @@ void __interrupt() isr(void)
     if(PIR1bits.TMR2IF)
     {
         res = MSERVOHandler();
-        //T2CONbits.TMR2ON = 0;
         PR2 = res;
-        PIR1bits.TMR2IF = 0;
-        //T2CONbits.TMR2ON = 1;  
+        PIR1bits.TMR2IF = 0;  
     }
 }
 void main(void) 
 {
     setupMCU();
     MSERVOSetup();
-    MSV.sv1pos = 50; //Ajusta motor al 50% 
+    MSV.sv1pos = 70; //Ajusta motor al 50% 
     while(1)
     {
         if(tickms)
@@ -50,9 +48,9 @@ void main(void)
             if(distOK)
             {
                 distOK = 0;
-                printf("R:%u\r\n", distcnt);
-                if(distcnt > 10) MSV.sv1pos = 90;
-                else MSV.sv1pos = 50; 
+                //printf("R:%u\r\n", distcnt);
+                if(distcnt < 3) MSV.sv1pos = 10;
+                else MSV.sv1pos = 70; 
             }
           
         }
@@ -105,20 +103,20 @@ void taskLED(void) //Destello de LED1 1Hz al 20%
 }
 void taskSR04(void) //Lectura de sensor pasos en ms
 {
-    static uint8_t cnt = 0;
+    static uint16_t cnt = 0;
     static uint8_t state = 0;
     switch(state)
     {
         case 0: //Disparo TRIG 10us
             TRIGpin = 1;
-            _delay(20); //0.5u x 20 = 10u
+            _delay(50); //0.5u x 20 = 10u
             TRIGpin = 0;
             state++;
             break;
         case 1: //Espera pulso ECHO
             if(ECHOpin) 
             {
-                cnt = 0;
+                cnt = 1;
                 state++;
             } 
             break;
@@ -126,12 +124,13 @@ void taskSR04(void) //Lectura de sensor pasos en ms
             cnt++;
             if(ECHOpin == 0)
             {
-                distcnt = cnt; //valor en pasos ms
+                distcnt = (uint8_t) cnt; //valor en pasos ms
                 distOK = 1;
+                cnt = 0;
                 state ++;
-            }
+            } break;
         case 3: //Espera nuevo ciclo
-            if(cnt++ > 249) state = 0;
+            if(cnt++ > 999) state = 0;
             break;
     }
 }
