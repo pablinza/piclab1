@@ -114,21 +114,21 @@ void taskSR04(void) //Lectura de sensor pasos en ms
             state++;
             break;
         case 1: //Espera pulso ECHO
-            if(ECHOpin) 
-            {
-                cnt = 1;
+            //if(ECHOpin) 
+            //{   
+                cnt = 0; //Luego de 1ms el pulso ECO ya esta en nivel alto
                 state++;
-            } 
+            //} 
             break;
         case 2: //Mide fin del pulso ECHO
-            cnt++;
+            if(cnt++ > 35) state = 3;//Si el pulso es mayor a 35ms
             if(ECHOpin == 0)
             {
                 distcnt = (uint8_t) cnt; //valor en pasos ms
                 distOK = 1;
-                cnt = 0;
-                state ++;
-            } break;
+                state = 3;
+            } 
+            break;
         case 3: //Espera nuevo ciclo
             if(cnt++ > 999) state = 0;
             break;
