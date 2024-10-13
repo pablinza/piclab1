@@ -49,6 +49,18 @@ Programa basico que muestra como leer desde un telcado matricial una contraseña
 
 Este programa permite controlar la velodidad de giro y el sentido o direccion de un motor tipo DC, donde se utiliza el modulo CCP del PIC para generar una señal de control PWM con frecuencia superior a los 20Khz. La conexion del motor se llevara a cabo utilizando un puente H.
 
+### - P07 - Reloj en Tiempo Real con Memoria  [APRTCCOM]
+En desarrollo
+Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307 y una memoria externa tipo EEPROM, el objetivo es configurar la fecha y hora del RTC mediante comandos recibidos por el puerto serie UART, asi como establecer una fecha y hora limite para la activacion de un LED. La configuracion de la fecha y hora limite se almacenara en la memoria externa EEPROM.
+
+### - P08 - Control de Tarjetas RFID [APRFIDCOM]
+En Desarrollo
+Se muestra el uso del protocolo SPI para comunicarse con el modulo lector RFID RC522, el programa realizara la lectura de un tarjeta RFID y validara el codigo identificador para determinar si la misma esta aceptada o rechazada con la indicacion de un LED.
+
+### - P09 - Recepcion de datos GPS [APGPSLOG]
+En Desarrollo
+Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados y para este ejemplo se utilizara un modulo LCD para mostrar la fecha y hora UTC del GPS. 
+
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
 
