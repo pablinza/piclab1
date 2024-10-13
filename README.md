@@ -4,8 +4,8 @@ Programacion del Microcontrolador PIC16F887 LAB1
 <p align="center">
   <img src="/images/pic1.png"></img>
 </p>
-Carpeta con los proyectos generados por MPLABX utilizando el compilador XC8 para los modelos:
-- PIC16F887 con oscilador interno 8MHz 
+Carpeta con los proyectos generados por MPLABX utilizando el compilador XC8 para el modelo:
+- PIC16F887 a 8MHz, utilamos la placa B8P40 descrita en el siguinte enlace [Click Aqui](https://github.com/pablinza/elt436)
 Los archivos con extension .c corresponden al codigo fuente de un programa o practica
 Los archivos con extension .h y .c con mismo nombre, son procedimientos y funciones basicas
 Los archivos con extension .hex representan el codigo de maquina generado para el PIC
