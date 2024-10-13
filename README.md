@@ -43,7 +43,11 @@ El programa permite controladr la posicion de un servomotor del tipo SG90, el co
 <p align="center">
   <img src="/images/ap5keypas.png"></img>
 </p>
-Programa basico que muestra como utilizar un telcado matricial para ingresar datos y una pantalla del tipo LCD, el proceso permite ingresar de manera controlada una clave de acceso de cuatro digitos para luego validar el dato y mostrar si la clave fue aceptada o rechazada.
+Programa basico que muestra como leer desde un telcado matricial una contraseña de cuatro digitos y mostrar su validacion en una pantalla tipo LCD, durante el proceso la pantalla muestra el ingreso de los datos y un mensaje para indicar que la constraseña fue aceptada o rechazada.
+
+### - P06 - Velocidad y Sentido de un Motor DC [APDCMOTOR]
+
+Este programa permite controlar la velodidad de giro y el sentido o direccion de un motor tipo DC, donde se utiliza el modulo CCP del PIC para generar una señal de control PWM con frecuencia superior a los 20Khz. La conexion del motor se llevara a cabo utilizando un puente H.
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
