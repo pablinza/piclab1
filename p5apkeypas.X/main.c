@@ -28,27 +28,27 @@ void __interrupt() isr(void)
 }
 void main(void) 
 {
-    setupMCU();
-    LCDSetup();
-    KBSetup();
+    setupMCU(); //Configura el PIC
+    LCDSetup(); //Configura el modulo LCD
+    KBSetup();  //Configura el Teclado
     while(1)
     {
-        if(tickms)
+        if(tickms) //Ejetua cada 1ms
         {
             tickms = 0;
             taskLED(); //Destella LED
-            taskAPP(); 
+            taskAPP(); //Corre la aplicacion  
         }
     }
 }
-void setupMCU(void)
+void setupMCU(void) //Procedimiento para configurar el PIC
 {
     OSCCONbits.IRCF = 0b111; //Oscilador Interno 8MHz
     while(OSCCONbits.HTS == 0);
     ANSEL = 0; //Desactiva pines ADC AN0 al AN7
     ANSELH = 0;//Desactiva pines ADC AN8 al AN13
-    TRISEbits.TRISE2 = 0; //Salida LED
-    PORTEbits.RE2 = 0;
+    TRISEbits.TRISE2 = 0; //Salida Pin LED
+    PORTEbits.RE2 = 0; //Apaga el LED
     OPTION_REGbits.nRBPU = 0; //Activa las pull-ups PORTB
     /* CONFIGURACION TIMER0 1MS a Fosc=8MHz*/
     OPTION_REGbits.T0CS = 0;//Modo Termporizador
@@ -57,12 +57,6 @@ void setupMCU(void)
     TMR0 = 131; //256-(time/((pre)*(4/Fosc))) time=0.001 seg
     INTCONbits.T0IF = 0; //Limpia bandera
     INTCONbits.T0IE = 1; //Activa interrupcion del TMR0
-    /* CONFIGURACION UART 8MHz 9600bps */
-    TXSTAbits.BRGH = 1; //Alta del Generador
-    TXSTAbits.TXEN = 1; //Activa el transmisor
-    RCSTAbits.CREN = 0; //Activa el receptor
-    RCSTAbits.SPEN = 1; //Habilita el modulo USART
-    SPBRG = 51; //Formula [8MHz/(16 * 9600)] - 1
     
     INTCONbits.GIE = 1; //Habilitador global ISR
 }
@@ -77,14 +71,14 @@ void taskLED(void) //Destello de LED1 1Hz al 20%
     if(cnt == 200) LEDpin = 0; //Apaga LED
 }
 
-void taskAPP(void)
+void taskAPP(void) //Aplicacion Lectura teclado y muestra LCD
 {
     static uint8_t keycnt, state = 0;
     static uint16_t cnt = 0;
     uint8_t res, value;
     switch(state)
     {
-        case 0: //Muestra mensaje
+        case 0: //Muestra el mensaje inicial
             LCDGotoXY(0,0);
             LCDWriteMsg(" PASSWORD");
             LCDGotoXY(0,1);
@@ -106,20 +100,20 @@ void taskAPP(void)
                 }
             } else cnt = 0;
             break;
-        case 2: //Ensambla 4 digitos
+        case 2: //Lectura de cuatro digitos
             pass[keycnt] = value;    
             keycnt++;
-            if(keycnt > 3)
+            if(keycnt > 3) //Espera el cuarto digito
             {
-                pass[keycnt] = 0;
+                pass[keycnt] = 0; //Clave lista
                 state = 4;
             } 
             else state = 3;
             break;
         case 3: //Espera liberacion de teclado
-            if(!KBScan()) state = 1; //Espera liberacion del teclado
+            if(!KBScan()) state = 1; //Si teclado es liberado
             break;
-        case 4: //Compara password
+        case 4: //Compara password y valida
             LCDGotoXY(0,1);
             res = (uint8_t) strcmp("3022", pass);
             if(res == 0) LCDWriteMsg(" Correcto");
@@ -134,9 +128,4 @@ void taskAPP(void)
             }
             break;
     }
-}
-void putch(char byte)
-{
-    while(PIR1bits.TXIF == 0) {};
-    TXREG = byte; 
 }
