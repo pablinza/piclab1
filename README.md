@@ -55,7 +55,7 @@ Este programa permite controlar la velodidad de giro y el sentido o direccion de
 <p align="center">
   <img src="/images/ap7rfidcom.png"></img>
 </p>
-Se muestra el uso del protocolo SPI para comunicarse con el modulo lector RFID RC522, el programa realizara la lectura de un tarjeta RFID y validara el codigo identificador para determinar si la misma es aceptada o rechazada con la indicacion de un LED.
+Se muestra el uso del protocolo SPI para comunicarse con el modulo lector RFID RC522, el programa realizara la lectura de un tarjeta RFID y validara el codigo identificador para determinar si la misma es aceptada o rechazada con la indicacion de un LED, ademas a traves de un mensaje por UART se enviara el numero serial de cada chip rfID identificado por el lector.
 
 ### - P08 - Reloj en Tiempo Real con Memoria  [APRTCCOM] *Pendiente
 En desarrollo
