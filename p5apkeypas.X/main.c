@@ -73,7 +73,7 @@ void taskLED(void) //Destello de LED1 1Hz al 20%
 
 void taskAPP(void) //Aplicacion Lectura teclado y muestra LCD
 {
-    static uint8_t keycnt, state = 0;
+    static uint8_t keycnt, state = 0, nerr = 0;
     static uint16_t cnt = 0;
     uint8_t res, value;
     switch(state)
@@ -116,9 +116,24 @@ void taskAPP(void) //Aplicacion Lectura teclado y muestra LCD
         case 4: //Compara password y valida
             LCDGotoXY(0,1);
             res = (uint8_t) strcmp("3022", pass);
-            if(res == 0) LCDWriteMsg(" Correcto");
-            else LCDWriteMsg("  Error ");
-            state = 5;
+            if(res == 0) 
+            {
+                LCDWriteMsg(" Autorizado");
+                state = 6; //Acceso autorizado
+            }
+            else 
+            {
+                if(++nerr >= 3) //Numero de intentos permitidos
+                {
+                    LCDWriteMsg(" Bloqueado");
+                    state = 7; //Usuario bloqueado
+                }
+                else
+                {
+                    LCDWriteMsg("  Error ");
+                    state = 5;
+                }
+            }
             break;
         case 5: //Genera retardo 
             if(cnt++ > 1999)
@@ -126,6 +141,12 @@ void taskAPP(void) //Aplicacion Lectura teclado y muestra LCD
                 LCDWriteCMD(LCD_CLEAR);
                 state = 0;
             }
+            break;
+        case 6: //Acceso autorizado
+            _nop();
+            break;
+        case 7://Usuario Bloqueado
+            _nop();
             break;
     }
 }
