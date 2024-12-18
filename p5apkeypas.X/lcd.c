@@ -104,7 +104,8 @@ void LCDWriteCMD(uint8_t cmd)
     LCD_delay_tcy();
     LCD_EN = 0;
     LCD_TRIS |= ~LCD_PORT_MASK;
-    LCD_delay_cmd();
+    if(cmd > 0x02) LCD_delay_cmd();
+    else LCD_delay_por(); //For CLEAR or HOME Command
 }
 /* void LCDGotoXY(col, row)
  * Set cursor to row and columns position
@@ -179,13 +180,12 @@ void LCDWriteMsgROM(const char *str)
  * Return: none*/
 void LCDSetup(void)
 {
+    uint8_t n = 10;
     LCD_EN_TRIS = 0;
     LCD_RS_TRIS = 0;
     LCD_RS = 0;	//Register select pin made low
     LCD_EN = 0; //Clock pin made low
-    LCD_delay_por();//Delay for 15ms to allow for LCD Power on reset
-    LCD_delay_por();
-    LCD_delay_por();
+    while(n--) LCD_delay_por();//15ms for LCD Power on reset
     LCD_TRIS &= LCD_PORT_MASK;
     LCD_PORT &= LCD_PORT_MASK;
 #ifdef LCD_UPPER_DB
@@ -197,6 +197,8 @@ void LCDSetup(void)
     LCD_delay_tcy();
     LCD_EN = 0;
     LCD_delay_por();	//5ms delay required 4.1ms
+    LCD_delay_por();
+    LCD_delay_por();
     LCD_PORT &= LCD_PORT_MASK;    	
 #ifdef LCD_UPPER_DB
     LCD_PORT |= 0b00110000;	//Interface is 8-bit 

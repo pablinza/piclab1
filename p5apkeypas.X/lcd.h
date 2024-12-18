@@ -30,7 +30,7 @@
 #endif
 #define LCD_delay_tcy() __delay_us(1) //EN clock
 #define LCD_delay_cmd() __delay_us(50)//CMD Wait 50us
-#define LCD_delay_por() __delay_us(5000)// POR 
+#define LCD_delay_por() __delay_us(2000)//POR Dalay 
 /*INPUTSET COMMAND MAY BE AND*/
 #define LCD_INPDEC      0x05   
 #define LCD_INPSHIFTOFF 0x06
