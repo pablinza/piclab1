@@ -63,7 +63,7 @@ Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307 
 
 ### - P09 - Recepcion de datos GPS [APGPSLOG] *Pendiente
 En Desarrollo
-Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados y para este ejemplo se utilizara un modulo LCD para mostrar la fecha y hora UTC del GPS. 
+Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados para extraer la posicion en coordenadas Latitud, Longitud que se muestran en una pantalla LCD utilizado el modulo I2C (PCF). 
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
