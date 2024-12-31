@@ -58,11 +58,15 @@ Este programa permite controlar la velodidad de giro y el sentido o direccion de
 Se muestra el uso del protocolo SPI para comunicarse con el modulo lector RFID RC522, el programa realizara la lectura de un tarjeta RFID y validara el codigo identificador para determinar si la misma es aceptada o rechazada con la indicacion de un LED, ademas a traves de un mensaje por UART se enviara el numero serial de cada chip rfID identificado por el lector.
 
 ### - P08 - Reloj en Tiempo Real con Memoria  [APRTCCOM] *Pendiente
-En desarrollo
+<p align="center">
+  <img src="/images/ap8rtcalarm.png"></img>
+</p>
 Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307 y una memoria externa tipo EEPROM, el objetivo es configurar la fecha y hora del RTC mediante comandos recibidos por el puerto serie UART, asi como establecer una fecha y hora limite para la activacion de un LED. La configuracion de la fecha y hora limite se almacenara en la memoria externa EEPROM.
 
 ### - P09 - Recepcion de datos GPS [APGPSLOG] *Pendiente
-En Desarrollo
+<p align="center">
+  <img src="/images/ap9gpslive.png"></img>
+</p>
 Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados para extraer la posicion en coordenadas Latitud, Longitud que se muestran en una pantalla LCD utilizado el modulo I2C (PCF). 
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
