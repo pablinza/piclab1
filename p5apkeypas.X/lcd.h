@@ -53,7 +53,7 @@
 #define LCD_SHIFT       0x1F //Default SC(DISPLAY SHIFT) RL(RIGHT)
 #define LCD_FUNCTIONSET 0x3F //Default DL(DATA8BIT) N(2ROWS) F(7x10)
 void LCDWriteChar(char data);
-void PCFWriteNum(uint16_t num, uint8_t padn);
+void LCDWriteNum(uint16_t num, uint8_t padn);
 void LCDWriteCMD(uint8_t cmd);
 void LCDGotoXY(uint8_t col, uint8_t row);
 void LCDWriteMsg(char *str);
