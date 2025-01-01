@@ -43,7 +43,7 @@ El programa permite controladr la posicion de un servomotor del tipo SG90, el co
 <p align="center">
   <img src="/images/ap5keypas.png"></img>
 </p>
-Programa basico que muestra como leer desde un telcado matricial una contraseña de cuatro digitos y mostrar su validacion en una pantalla tipo LCD, durante el proceso la pantalla muestra el ingreso de los datos y un mensaje para indicar que la constraseña fue aceptada o rechazada, despues de tres intentos fallidos el acceso se bloqueara.
+Programa basico que muestra como leer desde un telcado matricial 3x4 una contraseña de cuatro digitos y mostrar su validacion en una pantalla tipo LCD 16x2, durante el proceso la pantalla muestra el ingreso de los datos y un mensaje para indicar que la constraseña fue aceptada o rechazada, despues de tres intentos fallidos el acceso se bloqueara hasta reiniciar el programa.
 
 ### - P06 - Velocidad y Sentido de un Motor DC [APDCMOTOR] *En desarrollo
 Este programa permite controlar la velodidad de giro y el sentido o direccion de un motor tipo DC, donde se utiliza el modulo CCP del PIC para generar una señal de control PWM con frecuencia superior a los 20Khz. La conexion del motor se llevara a cabo utilizando un puente H con el circuito integrado L293D.
