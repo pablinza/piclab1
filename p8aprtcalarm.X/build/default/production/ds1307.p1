@@ -1,0 +1,648 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"28 ./ds1307.h
+[; ;./ds1307.h: 28: {
+[s S142 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S142 . sec min hour day dayofweek month year ]
+"8 ./i2c.h
+[; ;./i2c.h: 8: void I2CIdle(void);
+[v _I2CIdle `(v ~T0 @X0 0 ef ]
+"12
+[; ;./i2c.h: 12: void I2CStart(void);
+[v _I2CStart `(v ~T0 @X0 0 ef ]
+"15
+[; ;./i2c.h: 15: uint8_t I2CWrite(uint8_t data);
+[v _I2CWrite `(uc ~T0 @X0 0 ef1`uc ]
+"13
+[; ;./i2c.h: 13: void I2CRestart(void);
+[v _I2CRestart `(v ~T0 @X0 0 ef ]
+"14
+[; ;./i2c.h: 14: uint8_t I2CRead(void);
+[v _I2CRead `(uc ~T0 @X0 0 ef ]
+"10
+[; ;./i2c.h: 10: void I2CNotAck(void);
+[v _I2CNotAck `(v ~T0 @X0 0 ef ]
+"11
+[; ;./i2c.h: 11: void I2CStop(void);
+[v _I2CStop `(v ~T0 @X0 0 ef ]
+"9
+[; ;./i2c.h: 9: void I2CAck(void);
+[v _I2CAck `(v ~T0 @X0 0 ef ]
+"54 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"230
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 230: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"292
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 292: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"354
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 354: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"416
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 416: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"454
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 454: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"461
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 461: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"539
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 539: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"595
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 595: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"652
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 652: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"659
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 659: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"666
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 666: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"673
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 673: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"767
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 767: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"774
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 774: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"845
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 845: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"852
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 852: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"922
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 922: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"929
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 929: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"936
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 936: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"943
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 943: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"1040
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1040: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1135
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1135: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1142
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1142: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1149
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1149: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1156
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1156: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1163
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1163: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1170
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1170: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1240
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1240: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1247
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1247: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1348
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1348: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1418
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1418: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1480
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1480: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1542
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1542: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1604
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1604: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1666
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1666: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1704
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1704: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1760
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1760: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1817
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1817: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1864
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1864: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1929
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1929: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1981
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 1981: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"2043
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2043: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"2050
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2050: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"2057
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2057: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"2062
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2062: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2179
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2179: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2348
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2348: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2418
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2418: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2488
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2488: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2558
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2558: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2644
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2644: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2706
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2706: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2776
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2776: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2846
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2846: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2928
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2928: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2972
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2972: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2979
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 2979: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"3013
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3013: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"3066
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3066: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"3131
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3131: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3196
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3196: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3247
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3247: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3252
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3252: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3259
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3259: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3266
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3266: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3273
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3273: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3280
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3280: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3337
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3337: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3389
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3389: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3451
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3451: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3501
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3501: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3546
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"37 ./ds1307.h
+[; ;./ds1307.h: 37: RTC_t RTC;
+[v _RTC `S142 ~T0 @X0 1 e ]
+"13 ds1307.c
+[; ;ds1307.c: 13: uint8_t BCDtoDec(uint8_t val)
+[v _BCDtoDec `(uc ~T0 @X0 1 ef1`uc ]
+"14
+[; ;ds1307.c: 14: {
+{
+[e :U _BCDtoDec ]
+"13
+[; ;ds1307.c: 13: uint8_t BCDtoDec(uint8_t val)
+[v _val `uc ~T0 @X0 1 r1 ]
+"14
+[; ;ds1307.c: 14: {
+[f ]
+"15
+[; ;ds1307.c: 15:     uint8_t res;
+[v _res `uc ~T0 @X0 1 a ]
+"16
+[; ;ds1307.c: 16:     res = (val & 0x0F) + ((val & 0xF0)>>4)*10;
+[e = _res -> + & -> _val `i -> 15 `i * >> & -> _val `i -> 240 `i -> 4 `i -> 10 `i `uc ]
+"17
+[; ;ds1307.c: 17:     return res;
+[e ) _res ]
+[e $UE 143  ]
+"18
+[; ;ds1307.c: 18: }
+[e :UE 143 ]
+}
+"23
+[; ;ds1307.c: 23: uint8_t DectoBCD(uint8_t val)
+[v _DectoBCD `(uc ~T0 @X0 1 ef1`uc ]
+"24
+[; ;ds1307.c: 24: {
+{
+[e :U _DectoBCD ]
+"23
+[; ;ds1307.c: 23: uint8_t DectoBCD(uint8_t val)
+[v _val `uc ~T0 @X0 1 r1 ]
+"24
+[; ;ds1307.c: 24: {
+[f ]
+"25
+[; ;ds1307.c: 25:     uint8_t res;
+[v _res `uc ~T0 @X0 1 a ]
+"26
+[; ;ds1307.c: 26:     res = (uint8_t)(val/10);
+[e = _res -> / -> _val `i -> 10 `i `uc ]
+"27
+[; ;ds1307.c: 27:     res <<= 4;
+[e =<< _res -> -> 4 `i `uc ]
+"28
+[; ;ds1307.c: 28:     res |= (uint8_t)(val % 10);
+[e =| _res -> -> % -> _val `i -> 10 `i `uc `uc ]
+"29
+[; ;ds1307.c: 29:     return res;
+[e ) _res ]
+[e $UE 144  ]
+"30
+[; ;ds1307.c: 30: }
+[e :UE 144 ]
+}
+"35
+[; ;ds1307.c: 35: uint8_t RTCReadReg(uint8_t addr)
+[v _RTCReadReg `(uc ~T0 @X0 1 ef1`uc ]
+"36
+[; ;ds1307.c: 36: {
+{
+[e :U _RTCReadReg ]
+"35
+[; ;ds1307.c: 35: uint8_t RTCReadReg(uint8_t addr)
+[v _addr `uc ~T0 @X0 1 r1 ]
+"36
+[; ;ds1307.c: 36: {
+[f ]
+"37
+[; ;ds1307.c: 37:     uint8_t res;
+[v _res `uc ~T0 @X0 1 a ]
+"38
+[; ;ds1307.c: 38:     I2CIdle();
+[e ( _I2CIdle ..  ]
+"39
+[; ;ds1307.c: 39:     do
+[e :U 148 ]
+"40
+[; ;ds1307.c: 40:     {
+{
+"41
+[; ;ds1307.c: 41:         I2CStart();
+[e ( _I2CStart ..  ]
+"42
+[; ;ds1307.c: 42:     } while(!I2CWrite(0b11010000));
+}
+[e $ ! != -> ( _I2CWrite (1 -> -> 208 `i `uc `i -> 0 `i 148  ]
+[e :U 147 ]
+"43
+[; ;ds1307.c: 43:     I2CWrite(addr);
+[e ( _I2CWrite (1 _addr ]
+"44
+[; ;ds1307.c: 44:     I2CIdle();
+[e ( _I2CIdle ..  ]
+"45
+[; ;ds1307.c: 45:     I2CRestart();
+[e ( _I2CRestart ..  ]
+"46
+[; ;ds1307.c: 46:     I2CWrite(0b11010000 | 1);
+[e ( _I2CWrite (1 -> | -> 208 `i -> 1 `i `uc ]
+"47
+[; ;ds1307.c: 47:     res = I2CRead();
+[e = _res ( _I2CRead ..  ]
+"48
+[; ;ds1307.c: 48:     I2CNotAck();
+[e ( _I2CNotAck ..  ]
+"49
+[; ;ds1307.c: 49:     I2CStop();
+[e ( _I2CStop ..  ]
+"50
+[; ;ds1307.c: 50:     return(res);
+[e ) _res ]
+[e $UE 145  ]
+"51
+[; ;ds1307.c: 51: }
+[e :UE 145 ]
+}
+"56
+[; ;ds1307.c: 56: void RTCWriteReg(uint8_t addr, uint8_t data)
+[v _RTCWriteReg `(v ~T0 @X0 1 ef2`uc`uc ]
+"57
+[; ;ds1307.c: 57: {
+{
+[e :U _RTCWriteReg ]
+"56
+[; ;ds1307.c: 56: void RTCWriteReg(uint8_t addr, uint8_t data)
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+"57
+[; ;ds1307.c: 57: {
+[f ]
+"58
+[; ;ds1307.c: 58:     I2CIdle();
+[e ( _I2CIdle ..  ]
+"59
+[; ;ds1307.c: 59:     do
+[e :U 152 ]
+"60
+[; ;ds1307.c: 60:     {
+{
+"61
+[; ;ds1307.c: 61:         I2CStart();
+[e ( _I2CStart ..  ]
+"62
+[; ;ds1307.c: 62:     } while(!I2CWrite(0b11010000));
+}
+[e $ ! != -> ( _I2CWrite (1 -> -> 208 `i `uc `i -> 0 `i 152  ]
+[e :U 151 ]
+"63
+[; ;ds1307.c: 63:     I2CWrite(addr);
+[e ( _I2CWrite (1 _addr ]
+"64
+[; ;ds1307.c: 64:     I2CWrite(data);
+[e ( _I2CWrite (1 _data ]
+"65
+[; ;ds1307.c: 65:     I2CStop();
+[e ( _I2CStop ..  ]
+"66
+[; ;ds1307.c: 66: }
+[e :UE 149 ]
+}
+"71
+[; ;ds1307.c: 71: void RTCSetup(uint8_t mode)
+[v _RTCSetup `(v ~T0 @X0 1 ef1`uc ]
+"72
+[; ;ds1307.c: 72: {
+{
+[e :U _RTCSetup ]
+"71
+[; ;ds1307.c: 71: void RTCSetup(uint8_t mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"72
+[; ;ds1307.c: 72: {
+[f ]
+"73
+[; ;ds1307.c: 73:     uint8_t res;
+[v _res `uc ~T0 @X0 1 a ]
+"74
+[; ;ds1307.c: 74:     res = RTCReadReg(0x00);
+[e = _res ( _RTCReadReg (1 -> -> 0 `i `uc ]
+"75
+[; ;ds1307.c: 75:     res = res & 0x7F;
+[e = _res -> & -> _res `i -> 127 `i `uc ]
+"76
+[; ;ds1307.c: 76:     RTCWriteReg(0x00, res);
+[e ( _RTCWriteReg (2 , -> -> 0 `i `uc _res ]
+"77
+[; ;ds1307.c: 77:     RTCWriteReg(0x07, mode);
+[e ( _RTCWriteReg (2 , -> -> 7 `i `uc _mode ]
+"78
+[; ;ds1307.c: 78: }
+[e :UE 153 ]
+}
+"83
+[; ;ds1307.c: 83: void RTCGetdt(void)
+[v _RTCGetdt `(v ~T0 @X0 1 ef ]
+"84
+[; ;ds1307.c: 84: {
+{
+[e :U _RTCGetdt ]
+[f ]
+"85
+[; ;ds1307.c: 85:     uint8_t res;
+[v _res `uc ~T0 @X0 1 a ]
+"86
+[; ;ds1307.c: 86:     I2CIdle();
+[e ( _I2CIdle ..  ]
+"87
+[; ;ds1307.c: 87:     do
+[e :U 157 ]
+"88
+[; ;ds1307.c: 88:     {
+{
+"89
+[; ;ds1307.c: 89:         I2CStart();
+[e ( _I2CStart ..  ]
+"90
+[; ;ds1307.c: 90:     } while(!I2CWrite(0b11010000));
+}
+[e $ ! != -> ( _I2CWrite (1 -> -> 208 `i `uc `i -> 0 `i 157  ]
+[e :U 156 ]
+"91
+[; ;ds1307.c: 91:     I2CWrite(0x00);
+[e ( _I2CWrite (1 -> -> 0 `i `uc ]
+"92
+[; ;ds1307.c: 92:     I2CIdle();
+[e ( _I2CIdle ..  ]
+"93
+[; ;ds1307.c: 93:     I2CRestart();
+[e ( _I2CRestart ..  ]
+"94
+[; ;ds1307.c: 94:     I2CWrite(0b11010000 | 1);
+[e ( _I2CWrite (1 -> | -> 208 `i -> 1 `i `uc ]
+"95
+[; ;ds1307.c: 95:     res = I2CRead() & 0x7F;
+[e = _res -> & -> ( _I2CRead ..  `i -> 127 `i `uc ]
+"96
+[; ;ds1307.c: 96:     RTC.sec = BCDtoDec(res);
+[e = . _RTC 0 ( _BCDtoDec (1 _res ]
+"97
+[; ;ds1307.c: 97:     I2CAck();
+[e ( _I2CAck ..  ]
+"98
+[; ;ds1307.c: 98:     res = I2CRead();
+[e = _res ( _I2CRead ..  ]
+"99
+[; ;ds1307.c: 99:     RTC.min = BCDtoDec(res);
+[e = . _RTC 1 ( _BCDtoDec (1 _res ]
+"100
+[; ;ds1307.c: 100:     I2CAck();
+[e ( _I2CAck ..  ]
+"101
+[; ;ds1307.c: 101:     res = I2CRead() & 0x3F;
+[e = _res -> & -> ( _I2CRead ..  `i -> 63 `i `uc ]
+"102
+[; ;ds1307.c: 102:     RTC.hour = BCDtoDec(res);
+[e = . _RTC 2 ( _BCDtoDec (1 _res ]
+"103
+[; ;ds1307.c: 103:     I2CAck();
+[e ( _I2CAck ..  ]
+"104
+[; ;ds1307.c: 104:     RTC.dayofweek = I2CRead();
+[e = . _RTC 4 ( _I2CRead ..  ]
+"105
+[; ;ds1307.c: 105:     I2CAck();
+[e ( _I2CAck ..  ]
+"106
+[; ;ds1307.c: 106:     res = I2CRead();
+[e = _res ( _I2CRead ..  ]
+"107
+[; ;ds1307.c: 107:     RTC.day = BCDtoDec(res);
+[e = . _RTC 3 ( _BCDtoDec (1 _res ]
+"108
+[; ;ds1307.c: 108:     I2CAck();
+[e ( _I2CAck ..  ]
+"109
+[; ;ds1307.c: 109:     res = I2CRead();
+[e = _res ( _I2CRead ..  ]
+"110
+[; ;ds1307.c: 110:     RTC.month = BCDtoDec(res);
+[e = . _RTC 5 ( _BCDtoDec (1 _res ]
+"111
+[; ;ds1307.c: 111:     I2CAck();
+[e ( _I2CAck ..  ]
+"112
+[; ;ds1307.c: 112:     res = I2CRead();
+[e = _res ( _I2CRead ..  ]
+"113
+[; ;ds1307.c: 113:     RTC.year = BCDtoDec(res);
+[e = . _RTC 6 ( _BCDtoDec (1 _res ]
+"114
+[; ;ds1307.c: 114:     I2CNotAck();
+[e ( _I2CNotAck ..  ]
+"115
+[; ;ds1307.c: 115:     I2CStop();
+[e ( _I2CStop ..  ]
+"116
+[; ;ds1307.c: 116: }
+[e :UE 154 ]
+}
+"121
+[; ;ds1307.c: 121: void RTCSetdt(void)
+[v _RTCSetdt `(v ~T0 @X0 1 ef ]
+"122
+[; ;ds1307.c: 122: {
+{
+[e :U _RTCSetdt ]
+[f ]
+"123
+[; ;ds1307.c: 123:     uint8_t res;
+[v _res `uc ~T0 @X0 1 a ]
+"124
+[; ;ds1307.c: 124:     I2CIdle();
+[e ( _I2CIdle ..  ]
+"125
+[; ;ds1307.c: 125:     do
+[e :U 161 ]
+"126
+[; ;ds1307.c: 126:     {
+{
+"127
+[; ;ds1307.c: 127:         I2CStart();
+[e ( _I2CStart ..  ]
+"128
+[; ;ds1307.c: 128:     } while(!I2CWrite(0b11010000));
+}
+[e $ ! != -> ( _I2CWrite (1 -> -> 208 `i `uc `i -> 0 `i 161  ]
+[e :U 160 ]
+"129
+[; ;ds1307.c: 129:     I2CWrite(0x00);
+[e ( _I2CWrite (1 -> -> 0 `i `uc ]
+"130
+[; ;ds1307.c: 130:     res = DectoBCD(RTC.sec);
+[e = _res ( _DectoBCD (1 . _RTC 0 ]
+"131
+[; ;ds1307.c: 131:     I2CWrite(res);
+[e ( _I2CWrite (1 _res ]
+"132
+[; ;ds1307.c: 132:     res = DectoBCD(RTC.min);
+[e = _res ( _DectoBCD (1 . _RTC 1 ]
+"133
+[; ;ds1307.c: 133:     I2CWrite(res);
+[e ( _I2CWrite (1 _res ]
+"134
+[; ;ds1307.c: 134:     res = DectoBCD(RTC.hour);
+[e = _res ( _DectoBCD (1 . _RTC 2 ]
+"135
+[; ;ds1307.c: 135:     I2CWrite(res);
+[e ( _I2CWrite (1 _res ]
+"136
+[; ;ds1307.c: 136:     I2CWrite(RTC.dayofweek);
+[e ( _I2CWrite (1 . _RTC 4 ]
+"137
+[; ;ds1307.c: 137:     res = DectoBCD(RTC.day);
+[e = _res ( _DectoBCD (1 . _RTC 3 ]
+"138
+[; ;ds1307.c: 138:     I2CWrite(res);
+[e ( _I2CWrite (1 _res ]
+"139
+[; ;ds1307.c: 139:     res = DectoBCD(RTC.month);
+[e = _res ( _DectoBCD (1 . _RTC 5 ]
+"140
+[; ;ds1307.c: 140:     I2CWrite(res);
+[e ( _I2CWrite (1 _res ]
+"141
+[; ;ds1307.c: 141:     res = DectoBCD(RTC.year);
+[e = _res ( _DectoBCD (1 . _RTC 6 ]
+"142
+[; ;ds1307.c: 142:     I2CWrite(res);
+[e ( _I2CWrite (1 _res ]
+"143
+[; ;ds1307.c: 143:     I2CStop();
+[e ( _I2CStop ..  ]
+"144
+[; ;ds1307.c: 144: }
+[e :UE 158 ]
+}
