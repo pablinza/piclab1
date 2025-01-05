@@ -51,13 +51,13 @@ Este programa permite controlar la velodidad de giro y el sentido o direccion de
   <img src="/images/ap6dcmotor.png"></img>
 </p>
 
-### - P07 - Control con Tarjeta RFID [APRFIDCOM] *En desarrollo
+### - P07 - Control con Tarjeta RFID [APRFIDCOM]
 <p align="center">
   <img src="/images/ap7rfidcom.png"></img>
 </p>
 Se muestra como utilizar el modulo lector de tarjetas chip RFID RC522 a travez del puerto serie SPI del Microcontrolador, el programa realizara la lectura de una tarjeta RFID y enviara a traves del puerto serie UART, mensajes con el numero serial de la tarjeta y un valor decimal que representa los creditos asociados a la tarjeta, dependiendo de la cantidad de credito disponible, una luz roja y verde indicara si el acceso esta autorizado.
 
-### - P08 - Temporizador con Reloj RTC [APRTCCOM] *Pendiente
+### - P08 - Temporizador con Reloj RTC [APRTCCOM]
 <p align="center">
   <img src="/images/ap8rtcalarm.png"></img>
 </p>
