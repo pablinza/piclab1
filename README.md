@@ -57,11 +57,11 @@ Este programa permite controlar la velodidad de giro y el sentido o direccion de
 </p>
 Se muestra como utilizar el modulo lector de tarjetas chip RFID RC522 a travez del puerto serie SPI del Microcontrolador, el programa realizara la lectura de una tarjeta RFID y enviara a traves del puerto serie UART, mensajes con el numero serial de la tarjeta y un valor decimal que representa los creditos asociados a la tarjeta, dependiendo de la cantidad de credito disponible, una luz roja y verde indicara si el acceso esta autorizado.
 
-### - P08 - Reloj en Tiempo Real con Memoria  [APRTCCOM] *Pendiente
+### - P08 - Temporizador con Reloj RTC [APRTCCOM] *Pendiente
 <p align="center">
   <img src="/images/ap8rtcalarm.png"></img>
 </p>
-Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307 y una memoria externa tipo EEPROM, el objetivo es configurar la fecha y hora del RTC mediante comandos recibidos por el puerto serie UART, asi como establecer una fecha y hora limite para la activacion de un LED. La configuracion de la fecha y hora limite se almacenara en la memoria externa EEPROM.
+Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307, el objetivo es configurar la fecha y hora del RTC mediante comandos recibidos por el puerto serie UART, asi como establecer una fecha y hora limite para la activacion de un LED. La configuracion de la fecha y hora limite se almacenara en la memoria de datos EEPROM del PIC.
 
 ### - P09 - Recepcion de datos GPS [APGPSLOG] *Pendiente
 <p align="center">
