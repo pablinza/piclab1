@@ -73,10 +73,9 @@ Programa que utiliza el puerto serial UART para recibir los mensajes de un modul
 <p align="center">
   <img src="/images/ap10remoteir.png"></img>
 </p>
-Este programa muestra como utilizar el kit HX1838 control remoto y receptor de infrarojos Keyes-022, donde el PIC16F887 decodifica la trama de datos IR con protocolo NEC haciendo uso de interrupciones por cambio de estado.  En funcion de los botones presionados desde el control remoto se activaran y desactivaran cuatro luces tipo LED. 
-<br />
+Este programa muestra como utilizar el kit HX1838 control remoto y receptor de infrarojos Keyes-022, donde el PIC16F887 decodifica la trama de datos IR con protocolo NEC haciendo uso de interrupciones por cambio de estado.  En funcion de los botones presionados desde el control remoto se activaran y desactivaran cuatro luces tipo LED. <br />
 
-Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
+Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX <br />
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
 
 
