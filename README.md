@@ -70,7 +70,11 @@ Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307,
 Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados para extraer la posicion en coordenadas Latitud, Longitud que se muestran en una pantalla LCD utilizado el modulo I2C (PCF). 
 
 ### - P10 - Control Remoto por Infrarojo IR [APREMOTEIR] *Pendiente
-Este programa muestra como utilizar el kit HX1838 control remoto y receptor de infrarojos. El PIC16F886 decodifica los codigos del IR-NEC haciendo uso de interrupciones por cambio de estado en funcion de las botones presionados en el control remoto se activaran y desactivaran cuatro luces del tipo LED. 
+<p align="center">
+  <img src="/images/ap10remoteir.png"></img>
+</p>
+Este programa muestra como utilizar el kit HX1838 control remoto y receptor de infrarojos Keyes-022, donde el PIC16F887 decodifica la trama de datos IR con protocolo NEC haciendo uso de interrupciones por cambio de estado.  En funcion de los botones presionados desde el control remoto se activaran y desactivaran cuatro luces tipo LED. 
+
 
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
