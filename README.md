@@ -63,7 +63,7 @@ Se muestra como utilizar el modulo lector de tarjetas chip RFID RC522 a travez d
 </p>
 Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307, el objetivo es configurar la fecha y hora del RTC mediante comandos recibidos por el puerto serie UART, asi como establecer una fecha y hora limite para la activacion de un LED. La configuracion de la fecha y hora limite se almacenara en la memoria de datos EEPROM del PIC. Para descripcion (https://youtu.be/NIsh_5g4Zro)
 
-### - P09 - Recepcion de datos GPS [APGPSLOG] *Pendiente
+### - P09 - Recepcion de datos GPS [APGPSLOG]
 <p align="center">
   <img src="/images/ap9gpslive.png"></img>
 </p>
