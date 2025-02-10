@@ -67,7 +67,7 @@ Este programa hace uso del protocolo I2C para la comunicacion con un RTC DS1307,
 <p align="center">
   <img src="/images/ap9gpslive.png"></img>
 </p>
-Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados para extraer la posicion en coordenadas Latitud, Longitud que se muestran en una pantalla LCD utilizado el modulo I2C (PCF). 
+Programa que utiliza el puerto serial UART para recibir los mensajes de un modulo GPS, los mensajes NMEA emitidos por el receptor GPS son decodificados para extraer la posicion en coordenadas Latitud, Longitud que se muestran en una pantalla LCD utilizado el modulo I2C (PCF). Para descripcion (https://youtu.be/aT-w1kmcUjA)
 
 ### - P10 - Control Remoto por Infrarojo IR [APREMOTEIR] *Pendiente
 <p align="center">
