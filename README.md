@@ -19,7 +19,7 @@ Practicas de Programacion para Microcontroladores PIC16F.
   <p align="center">
   <img src="/images/ap1base.png"></img>
 </p>
-El programa destella los leds conectados el PIC con frecuencia y ciclo de trabajo diferente, se hace uso del temporizador TMR0 para realizar las tareas de forma concurrente sin bloquear le ejecucion del programa principal. EL modulo TMR0 esta configurado para temporizar intervales de 1ms. Para descripcion(https://youtu.be/rYyD9MK57Po)
+El programa destella los leds conectados el PIC con frecuencia y ciclo de trabajo diferente, se hace uso del temporizador TMR0 para realizar las tareas de forma concurrente sin bloquear le ejecucion del programa principal. EL modulo TMR0 esta configurado para temporizar intervalos de 1ms. Para descripcion(https://youtu.be/rYyD9MK57Po)
 
 ### - P02 - Control de Trafico Vehicular [APTRAFFIC]
 <p align="center">
