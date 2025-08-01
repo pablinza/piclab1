@@ -11,8 +11,84 @@ Los archivos con extension .h y .c con mismo nombre, son procedimientos y funcio
 Los archivos con extension .hex representan el codigo de maquina generado para el PIC
 Los archivos con extension .png corresponden a una imagen de esquema de circuito
 
-Los proyectos se crearon con la version MPLABX 6.25 y el compilador XC8 2.50 version FREE
-Practicas de Programacion para Microcontroladores PIC16F.
+En todos los casos el PIC16F887 trabajara a una frecuencia de 8MHz utilizando el Oscilador Interno. En caso de utilizar un __bootloader__, se debe reservar el uso de memoria en MPLABX.
+La carpeta `pnnapxxx.X` coeesponde al proyecto generado con `MPLABX` version 6.25 y utiliza el compilador `XC8` version 2.5 <br />
+
+
+## ESQUEMAS DEL CIRCUITO PIC16F887 PARA IMPLEMENTAR
+Descripcion de la Placa B8P40 utilizada para los ejercico de programacion en Laboratorio U.E.B Asignatura ELT
+<p align="center">
+  <img src="/images/b8p40.png"></img>
+</p>
+
+### - BLoque 1 - Conexiones del Microcontrolador
+  <p align="center">
+  <img src="/images/b8p40_sch_p1.png"></img>
+</p>
+
+Programa base __main.c__ para destellar un LED y que se utilizara en todas las practicas de este repositorio.
+
+```c
+#pragma config FOSC=INTRC_NOCLKOUT, WDTE = OFF, BOREN = OFF, LVP = OFF
+#include <xc.h>
+#define LEDpin PORTEbits.RE2 //Led de la tarjeta
+volatile __bit tickms;
+void setupMCU(void); //Configuracion del PIC
+void taskLED(void); //Tarea para destellar el LED
+void __interrupt() isr(void) //Rutina de servicio a la Interrupcion
+{
+    if(INTCONbits.T0IF) //Evento del temporizador 0.001s
+    {
+        INTCONbits.T0IF = 0;
+        TMR0 += 131; //Recarga el contador
+        tickms = 1;
+    }
+}
+void main(void) 
+{
+    setupMCU();
+    while(1)
+    {
+        if(tickms)
+        {
+            tickms = 0;
+            taskLED(); //Destella LED
+        }
+    }
+}
+void setupMCU(void)
+{
+    OSCCONbits.IRCF = 0b111; //Oscilador Interno 8MHz
+    while(OSCCONbits.HTS == 0);
+    ANSEL = 0; //Desactiva pines ADC AN0 al AN7
+    ANSELH = 0;//Desactiva pines ADC AN8 al AN13
+    TRISEbits.TRISE2 = 0; //Salida LED
+    OPTION_REGbits.nRBPU = 0; //Activa las pull-ups PORTB
+    /* CONFIGURACION TIMER0 1MS a Fosc=8MHz*/
+    OPTION_REGbits.T0CS = 0;//Modo Termporizador
+    OPTION_REGbits.PSA = 0; //Con prescala
+    OPTION_REGbits.PS = 0b011; //Prescala 1:16
+    TMR0 = 131; //256-(time/((pre)*(4/Fosc))) time=0.001 seg
+    INTCONbits.T0IF = 0; //Limpia bandera
+    INTCONbits.T0IE = 1; //Activa interrupcion del TMR0
+    
+    INTCONbits.GIE = 1; //Habilitador global ISR
+}
+void taskLED(void) //Destello de LED1 1Hz al 20%
+{
+    static uint16_t cnt = 0;
+    if(cnt++ > 999) 
+    {
+        cnt = 0;
+        LEDpin = 1; //Activa LED
+    }
+    if(cnt == 200) LEDpin = 0; //Apaga LED
+}
+```
+
+Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
+[![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
+
 
 ## Lista de practicas desarrolladas en la Materia
 ### - P01 - Destello de Luz Secuencial   [APPBASE]
