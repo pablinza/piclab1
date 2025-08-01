@@ -71,7 +71,6 @@ void setupMCU(void)
     TMR0 = 131; //256-(time/((pre)*(4/Fosc))) time=0.001 seg
     INTCONbits.T0IF = 0; //Limpia bandera
     INTCONbits.T0IE = 1; //Activa interrupcion del TMR0
-    
     INTCONbits.GIE = 1; //Habilitador global ISR
 }
 void taskLED(void) //Destello de LED1 1Hz al 20%
@@ -85,10 +84,9 @@ void taskLED(void) //Destello de LED1 1Hz al 20%
     if(cnt == 200) LEDpin = 0; //Apaga LED
 }
 ```
-
+<br />
 Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
 [![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
-
 
 ## Lista de practicas desarrolladas en la Materia
 ### - P01 - Destello de Luz Secuencial   [APPBASE]
