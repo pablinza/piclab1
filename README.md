@@ -1,14 +1,12 @@
 # PICMCU LAB1 pablinza@me.com
 Programacion del Microcontrolador PIC16F887 LAB1
-Repositorio con las carpetas de los proyectos generados por MPLABX utilizando el compilador XC8 para el PIC16F887:
-- Utilizaremos la placa B8P40 que lleva un Cristal HS de 20MHz, un LED, Pulsador Reset y Puerto para comunicacion UART
-Los archivos con extension .c corresponden al codigo fuente de un programa o practica
-Los archivos con extension .h y .c con mismo nombre, son procedimientos y funciones basicas
-Los archivos con extension .hex representan el codigo de maquina generado para el PIC
-Los archivos con extension .png corresponden a una imagen de esquema de circuito
+Repositorio con las carpetas de los proyectos generados por MPLABX utilizando el compilador XC8 para el PIC16F887  <br />
+El software __MPLABX__ disponible en la pagina del fabricante Microchip [ --> Click](https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v6.20-windows-installer.exe?authuser=0) <br />
+El compilador __XC8__ puedes descargalo utilizando este enlace [ --> Click](https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v2.50-full-install-windows-x64-installer.exe?authuser=0) <br />
+Para cargar el firmware al microcontrolador necesitaras un programador ICSP, como alternativa se utiliza el software __SimulIDE__ [ -->Click](https://simulide.com/p/) a efectos de verificar el funcionamiento <br />
+Cada carpeta del proyecto MPLABX tiene el nombre precedido por el numero de actividad y en su estructura encontrara el programa principal con el nombre __main.c__ y librerias de uso local, una vez compilado el codigo se genera el firmware archivo __.hex__ en la carpeta dist/default/production. <br />
 
-En todos los casos la programacion del PIC16F887 sera utilizando el oscilador interno RC a 8MHz, salvo algunos casos donde se utilizara el Cristal HS de 20MHz. En caso de utilizar un __bootloader__, se debe reservar el uso de memoria en MPLABX.
-La carpeta `pnnapxxx.X` coeesponde al proyecto generado con `MPLABX` version 6.25 y utiliza el compilador `XC8` version 2.5 <br />
+Utilizaremos la placa B8P40 que lleva un Cristal HS de 20MHz, un LED, Pulsador Reset y Puerto para comunicacion UART, en todos los casos la programacion del PIC16F887 sera utilizando el oscilador interno RC a 8MHz, salvo casos donde se requiera mas velocidad se usara el HS a 20MHz. En caso de utilizar un __bootloader__, se debe reservar el uso de memoria en MPLABX. <br />
 
 ## ESQUEMAS DEL CIRCUITO PIC16F887 PARA IMPLEMENTAR
 Descripcion de la Placa B8P40 utilizada para los ejercico de programacion en Laboratorio U.E.B Asignatura ELT
