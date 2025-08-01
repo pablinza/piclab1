@@ -4,16 +4,15 @@ Programacion del Microcontrolador PIC16F887 LAB1
 <p align="center">
   <img src="/images/pic1.png"></img>
 </p>
-Carpeta con los proyectos generados por MPLABX utilizando el compilador XC8 para el modelo:
-- PIC16F887 a 8MHz, utilamos la placa B8P40 descrita en el siguinte enlace [Click Aqui](https://github.com/pablinza/elt436)
+Repositorio con las carpetas de los proyectos generados por MPLABX utilizando el compilador XC8 para el PIC16F887:
+- Utilizaremos amos la placa B8P40 que posee un cristal de 20MHz descrito mas abajo y el siguinte enlace [Click Aqui](https://github.com/pablinza/elt436)
 Los archivos con extension .c corresponden al codigo fuente de un programa o practica
 Los archivos con extension .h y .c con mismo nombre, son procedimientos y funciones basicas
 Los archivos con extension .hex representan el codigo de maquina generado para el PIC
 Los archivos con extension .png corresponden a una imagen de esquema de circuito
 
-En todos los casos el PIC16F887 trabajara a una frecuencia de 8MHz utilizando el Oscilador Interno. En caso de utilizar un __bootloader__, se debe reservar el uso de memoria en MPLABX.
+En todos los casos la programacion del PIC16F887 sera utilizando el oscilador interno RC a 8MHz, salvo algunos casos donde se utilizara el Cristal HS de 20MHz. En caso de utilizar un __bootloader__, se debe reservar el uso de memoria en MPLABX.
 La carpeta `pnnapxxx.X` coeesponde al proyecto generado con `MPLABX` version 6.25 y utiliza el compilador `XC8` version 2.5 <br />
-
 
 ## ESQUEMAS DEL CIRCUITO PIC16F887 PARA IMPLEMENTAR
 Descripcion de la Placa B8P40 utilizada para los ejercico de programacion en Laboratorio U.E.B Asignatura ELT
