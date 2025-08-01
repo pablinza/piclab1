@@ -1,11 +1,7 @@
 # PICMCU LAB1 pablinza@me.com
 Programacion del Microcontrolador PIC16F887 LAB1
-
-<p align="center">
-  <img src="/images/pic1.png"></img>
-</p>
 Repositorio con las carpetas de los proyectos generados por MPLABX utilizando el compilador XC8 para el PIC16F887:
-- Utilizaremos amos la placa B8P40 que posee un cristal de 20MHz descrito mas abajo y el siguinte enlace [Click Aqui](https://github.com/pablinza/elt436)
+- Utilizaremos la placa B8P40 que lleva un Cristal HS de 20MHz, un LED, Pulsador Reset y Puerto para comunicacion UART
 Los archivos con extension .c corresponden al codigo fuente de un programa o practica
 Los archivos con extension .h y .c con mismo nombre, son procedimientos y funciones basicas
 Los archivos con extension .hex representan el codigo de maquina generado para el PIC
