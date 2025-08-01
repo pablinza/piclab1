@@ -85,8 +85,7 @@ void taskLED(void) //Destello de LED1 1Hz al 20%
 }
 ```
 <br />
-Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX
-[![](http://img.youtube.com/vi/w-GRu89glrg/0.jpg)](http://www.youtube.com/watch?v=w-GRu89glrg "Compilar en MPLABX")
+Adjunto el siguiente link que muestra como compilar estos ejemplos en MPLABX [-->Click](http://www.youtube.com/watch?v=w-GRu89glrg)
 
 ## Lista de practicas desarrolladas en la Materia
 ### - P01 - Destello de Luz Secuencial   [APPBASE]
