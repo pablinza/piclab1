@@ -1,5 +1,5 @@
 # PICMCU LAB1 pablinza@me.com
-Programacion del Microcontrolador PIC16F887 LAB1, este es repositorio con las carpetas de proyectos generados por MPLABX utilizando el compilador XC8 y el PIC16F887 durante la actividad practica de la materia Microcontroladores PIC <br />
+Programacion del Microcontrolador PIC16F887 LAB1, este repositorio contiene las carpetas de proyectos generados por MPLABX utilizando el compilador XC8 y el PIC16F887 durante la actividad practica de la materia Microcontroladores PIC <br />
 El software __MPLABX__ disponible en la pagina del fabricante Microchip [ --> Click](https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v6.20-windows-installer.exe?authuser=0) <br />
 El compilador __XC8__ puedes descargalo utilizando este enlace [ --> Click](https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v2.50-full-install-windows-x64-installer.exe?authuser=0) <br />
 
