@@ -7,7 +7,7 @@ Para cargar el firmware al microcontrolador necesitaras un programador ICSP, com
 
 Utilizaremos la placa B8P40 que lleva un Cristal HS de 20MHz, un LED, Pulsador Reset y Puerto para comunicacion UART, en todos los casos la programacion del PIC16F887 sera utilizando el oscilador interno RC a 8MHz, salvo casos donde se requiera mas velocidad se usara el HS a 20MHz. En caso de utilizar un __bootloader__, se debe reservar el uso de memoria en MPLABX. <br />
 
-## ESQUEMAS DEL CIRCUITO PIC16F887 PARA IMPLEMENTAR
+## Tarjeta de Pruebas B8P40 
 Descripcion de la Placa B8P40 utilizada para los ejercico de programacion en Laboratorio U.E.B Asignatura ELT
 <p align="center">
   <img src="/images/b8p40.png"></img>
