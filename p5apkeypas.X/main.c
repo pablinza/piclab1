@@ -96,12 +96,12 @@ void taskAPP(void) //Aplicacion Lectura teclado y muestra LCD
                 {
                     value = KBGetChar(res);//Recupera valor char
                     LCDWriteChar(value); //Escribe valor
+                    pass[keycnt] = value;
                     state = 2;
                 }
             } else cnt = 0;
             break;
-        case 2: //Lectura de cuatro digitos
-            pass[keycnt] = value;    
+        case 2: //Lectura de cuatro digitos   
             keycnt++;
             if(keycnt > 3) //Espera el cuarto digito
             {
